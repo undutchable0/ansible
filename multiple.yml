@@ -1,0 +1,12 @@
+---
+- hosts: switches
+
+- gather_facts: false
+  connection: local
+
+  tasks:
+    - name: Change Multiple Descriptions
+      ios_l2_interfaces:
+       config:
+       - name: fa2/1
+         description: testies
